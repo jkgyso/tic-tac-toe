@@ -5,12 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic-Tac-Toe</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Unbounded:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <h1 class="header">Tic-Tac-Toe</h1>
+    <div class="players">
+      <div class="player-names">
+        <label for="player1">Enter Player 1 Name:</label>
+        <input type="text" id="player1" name="player1" />
+      </div>
+
+      <div class="player-names">
+        <label for="player2">Enter Player 2 Name:</label>
+        <input type="text" id="player2" name="player2" />
+      </div>
+
+      <button class="submit-players">Submit</button>
+    </div>
     <div class="container">
       <h1 class="turn"></h1>
       <div class="board"></div>
+      <div class="score"></div>
     </div>
+
+    <button class="restart-game">Restart Game</button>
     <script src="./script.js"></script>
   </body>
 </html>

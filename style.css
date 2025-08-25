@@ -1,3 +1,84 @@
+:root {
+  --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-header: 'Unbounded', sans-serif, var(var(--system-ui));
+  --font-primary: 'Alata', sans-serif, var(var(--system-ui));
+  --fs-header: clamp(1.5rem, 4vw, 3rem);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  gap: 1.5rem;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+.header {
+    font-family: var(--font-header);
+    font-size: var(--fs-header);
+}
+
+
+.players {
+    border: 2px solid black;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    width: min(400px, 50vw);
+    height: 30vh;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.player-names {
+    display: flex; 
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+.container {
+  display: none;
+}
+
 .board {
     display: grid; 
     height: 500px;
@@ -18,4 +99,8 @@
     border: 1px solid grey;
     background-color: lightyellow;
     cursor: pointer;
+}
+
+.restart-game {
+  display: none;
 }
